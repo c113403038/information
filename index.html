@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design to Code Example</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f6f6;
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+            color: #2f2f2f;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border: 1px solid #eaeaea;
+            width: 530px; /* Matching the image area approx */
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        /* Specified Button Styles */
+        .btn-detail {
+            height: 22px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            border: 1px solid #2f2f2f;
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #2f2f2f;
+            cursor: pointer;
+            padding: 0 15px;
+            display: flex;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .btn-detail:hover {
+            background-color: #f0f0f0;
+        }
+
+        .image-preview {
+            width: 496px;
+            height: 240px;
+            background-color: #ddd;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid #ccc;
+        }
+
+        .image-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Detailed Info Section (Hidden by default) */
+        .info-panel {
+            display: none;
+            margin-top: 10px;
+            border-top: 1px solid #eaeaea;
+            padding-top: 10px;
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        .info-row {
+            background-color: #e8f3ff; /* List select color from specs */
+            margin-bottom: 2px;
+            padding: 4px 10px;
+            border-bottom: 1px solid #cfddff;
+        }
+
+        .info-label {
+            color: #707070;
+            font-weight: bold;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <button class="btn-detail" onclick="toggleDetails()">查看資訊</button>
+        </div>
+
+        <div class="image-preview">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80" alt="Preview">
+        </div>
+
+        <div id="details" class="info-panel">
+            <div class="info-row">修改日期：2026/04/27</div>
+            <div class="info-row">類別：JPG</div>
+            <div class="info-row">大小：466.97KB</div>
+            <div class="info-row" style="word-break: break-all;">
+                路徑：\\designcenter.qnap.com.tw\DesignCenter\PM-RD\WEB\v2\sample
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleDetails() {
+            const panel = document.getElementById('details');
+            const btn = document.querySelector('.btn-detail');
+            
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+                btn.textContent = '查看資訊';
+            } else {
+                panel.style.display = 'block';
+                btn.textContent = '收起資訊';
+            }
+        }
+    </script>
+
+</body>
+</html>
