@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design to Code Example</title>
-    <link href="https://share.google/images/st6HLgL2nWSt25u4P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Roboto', "Microsoft JhengHei", sans-serif;
             background-color: #f6f6f6;
             display: flex;
             justify-content: center;
@@ -19,7 +19,7 @@
             background: white;
             padding: 20px;
             border: 1px solid #eaeaea;
-            width: 530px; /* Matching the image area approx */
+            width: 530px;
         }
 
         .header {
@@ -28,24 +28,17 @@
             margin-bottom: 10px;
         }
 
-        /* Specified Button Styles */
         .btn-detail {
             height: 22px;
             border-radius: 8px;
             background-color: #ffffff;
             border: 1px solid #2f2f2f;
-            font-family: 'Roboto', sans-serif;
             font-size: 13px;
             color: #2f2f2f;
             cursor: pointer;
             padding: 0 15px;
             display: flex;
             align-items: center;
-            transition: background 0.2s;
-        }
-
-        .btn-detail:hover {
-            background-color: #f0f0f0;
         }
 
         .image-preview {
@@ -60,33 +53,22 @@
         .image-preview img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* 確保圖片填滿格子不變形 */
         }
 
-        /* Detailed Info Section (Hidden by default) */
         .info-panel {
             display: none;
             margin-top: 10px;
             border-top: 1px solid #eaeaea;
             padding-top: 10px;
             font-size: 13px;
-            line-height: 1.8;
         }
 
         .info-row {
-            background-color: #e8f3ff; /* List select color from specs */
+            background-color: #e8f3ff;
             margin-bottom: 2px;
             padding: 4px 10px;
             border-bottom: 1px solid #cfddff;
-        }
-
-        .info-label {
-            color: #707070;
-            font-weight: bold;
-        }
-
-        .show {
-            display: block;
         }
     </style>
 </head>
@@ -98,7 +80,7 @@
         </div>
 
         <div class="image-preview">
-            <img src="https://share.google/images/st6HLgL2nWSt25u4P" alt="Preview">
+            <img src="https://www.ncu.edu.tw/assets/thumbs/800x600/files/pages/1/6580f83733221.jpg" alt="中央大學">
         </div>
 
         <div id="details" class="info-panel">
@@ -106,7 +88,7 @@
             <div class="info-row">類別：JPG</div>
             <div class="info-row">大小：466.97KB</div>
             <div class="info-row" style="word-break: break-all;">
-                路徑：\\designcenter.qnap.com.tw\DesignCenter\PM-RD\WEB\v2\sample
+                路徑：NCU_Campus_View.jpg
             </div>
         </div>
     </div>
