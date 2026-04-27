@@ -2,74 +2,39 @@
 <html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Design to Code Example</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>工程師與設計師協作範例</title>
     <style>
-        body {
-            font-family: 'Roboto', "Microsoft JhengHei", sans-serif;
-            background-color: #f6f6f6;
-            display: flex;
-            justify-content: center;
-            padding: 40px;
-            color: #2f2f2f;
-        }
-
-        .container {
-            background: white;
-            padding: 20px;
-            border: 1px solid #eaeaea;
-            width: 530px;
-        }
-
-        .header {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 10px;
-        }
-
+        body { font-family: sans-serif; background-color: #f6f6f6; padding: 40px; }
+        .container { background: white; padding: 20px; border: 1px solid #eaeaea; width: 530px; margin: auto; }
+        .header { display: flex; justify-content: flex-end; margin-bottom: 10px; }
+        
+        /* 嚴格遵守設計稿的按鈕樣式 */
         .btn-detail {
-            height: 22px;
-            border-radius: 8px;
-            background-color: #ffffff;
+            height: 22px; 
+            border-radius: 8px; 
+            background: #ffffff; 
             border: 1px solid #2f2f2f;
-            font-size: 13px;
-            color: #2f2f2f;
+            font-size: 13px; 
             cursor: pointer;
             padding: 0 15px;
-            display: flex;
-            align-items: center;
         }
 
         .image-preview {
-            width: 496px;
-            height: 240px;
-            background-color: #ddd;
-            margin-bottom: 15px;
-            overflow: hidden;
+            width: 496px; 
+            height: 240px; 
+            background-color: #eee;
             border: 1px solid #ccc;
+            overflow: hidden;
         }
 
         .image-preview img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* 確保圖片填滿格子不變形 */
+            object-fit: cover; /* 確保圖片縮放比例正確 */
         }
 
-        .info-panel {
-            display: none;
-            margin-top: 10px;
-            border-top: 1px solid #eaeaea;
-            padding-top: 10px;
-            font-size: 13px;
-        }
-
-        .info-row {
-            background-color: #e8f3ff;
-            margin-bottom: 2px;
-            padding: 4px 10px;
-            border-bottom: 1px solid #cfddff;
-        }
+        .info-panel { display: none; margin-top: 10px; }
+        .info-row { background: #e8f3ff; padding: 5px 10px; border-bottom: 1px solid #cfddff; font-size: 13px; }
     </style>
 </head>
 <body>
@@ -80,33 +45,25 @@
         </div>
 
         <div class="image-preview">
-            <img src="https://www.ncu.edu.tw/assets/thumbs/800x600/files/pages/1/6580f83733221.jpg" alt="中央大學">
+            <img src="https://www.ncu.edu.tw/assets/thumbs/800x600/files/pages/1/6580f83733221.jpg" alt="Campus">
         </div>
 
         <div id="details" class="info-panel">
             <div class="info-row">修改日期：2026/04/27</div>
             <div class="info-row">類別：JPG</div>
-            <div class="info-row">大小：466.97KB</div>
-            <div class="info-row" style="word-break: break-all;">
-                路徑：NCU_Campus_View.jpg
-            </div>
+            <div class="info-row">路徑：中央大學校園圖</div>
         </div>
     </div>
 
     <script>
         function toggleDetails() {
-            const panel = document.getElementById('details');
-            const btn = document.querySelector('.btn-detail');
-            
-            if (panel.style.display === 'block') {
-                panel.style.display = 'none';
-                btn.textContent = '查看資訊';
+            var x = document.getElementById("details");
+            if (x.style.display === "block") {
+                x.style.display = "none";
             } else {
-                panel.style.display = 'block';
-                btn.textContent = '收起資訊';
+                x.style.display = "block";
             }
         }
     </script>
-
 </body>
 </html>
